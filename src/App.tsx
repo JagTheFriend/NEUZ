@@ -1,17 +1,25 @@
 import { Activity, useEffect, useState } from "react";
 import Header from "@/components/Header";
 import NewsGrid from "@/components/NewsGrid";
+import CustomError from "./components/CustomError";
 import Skeletons from "./components/Skeletons";
 import { getNewsArticles, type NewsArticle } from "./data/newsData";
 
 const Index = () => {
 	const [newsArticles, setNewsArticle] = useState<NewsArticle[]>([]);
-	const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(false);
+	const [isError, setIsError] = useState(false);
 
 	useEffect(() => {
 		const fetchNewsArticles = async () => {
-			const articles = await getNewsArticles();
-			setNewsArticle(articles);
+			setIsLoading(true);
+			try {
+				const articles = await getNewsArticles();
+				setNewsArticle(articles);
+			} catch (error) {
+				console.error("Failed to fetch news articles:", error);
+				setIsError(true);
+			}
 			setIsLoading(false);
 		};
 		fetchNewsArticles();
@@ -20,6 +28,10 @@ const Index = () => {
 	return (
 		<div className="min-h-screen bg-background">
 			<Header />
+
+			<Activity mode={isError ? "visible" : "hidden"}>
+				<CustomError />
+			</Activity>
 
 			<Activity mode={isLoading ? "visible" : "hidden"}>
 				<Skeletons />
