@@ -4,7 +4,6 @@ export interface NewsArticle {
 	summary: string;
 	imageUrl: string;
 	sourceUrl: string;
-	category: string;
 }
 
 export const newsArticles: NewsArticle[] = [
@@ -17,7 +16,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop",
 		sourceUrl: "https://reuters.com",
-		category: "Finance",
 	},
 	{
 		id: 2,
@@ -27,7 +25,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop",
 		sourceUrl: "https://bloomberg.com",
-		category: "Technology",
 	},
 	{
 		id: 3,
@@ -37,7 +34,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1640955014216-75201056c829?w=400&h=250&fit=crop",
 		sourceUrl: "https://cnbc.com",
-		category: "Technology",
 	},
 	{
 		id: 4,
@@ -47,7 +43,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&h=250&fit=crop",
 		sourceUrl: "https://reuters.com",
-		category: "Commodities",
 	},
 	{
 		id: 5,
@@ -57,7 +52,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=250&fit=crop",
 		sourceUrl: "https://wsj.com",
-		category: "Healthcare",
 	},
 	{
 		id: 6,
@@ -67,7 +61,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&h=250&fit=crop",
 		sourceUrl: "https://yahoo.com",
-		category: "Retail",
 	},
 	{
 		id: 7,
@@ -77,7 +70,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&h=250&fit=crop",
 		sourceUrl: "https://wsj.com",
-		category: "Finance",
 	},
 	{
 		id: 8,
@@ -87,7 +79,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=400&h=250&fit=crop",
 		sourceUrl: "https://reuters.com",
-		category: "Automotive",
 	},
 	{
 		id: 9,
@@ -97,7 +88,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=400&h=250&fit=crop",
 		sourceUrl: "https://bloomberg.com",
-		category: "Industry",
 	},
 	{
 		id: 10,
@@ -107,7 +97,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=250&fit=crop",
 		sourceUrl: "https://cnbc.com",
-		category: "Energy",
 	},
 	{
 		id: 11,
@@ -117,7 +106,6 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=250&fit=crop",
 		sourceUrl: "https://reuters.com",
-		category: "Travel",
 	},
 	{
 		id: 12,
@@ -127,6 +115,5 @@ export const newsArticles: NewsArticle[] = [
 		imageUrl:
 			"https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=400&h=250&fit=crop",
 		sourceUrl: "https://coindesk.com",
-		category: "Crypto",
 	},
 ];
