@@ -13,12 +13,15 @@ const NewsCard = ({ article }: NewsCardProps) => {
 	};
 
 	return (
-		<article className="group flex flex-col overflow-hidden rounded-lg bg-card card-shadow transition-all duration-300 hover:card-shadow-hover border-2 hover:scale-105 cursor-default">
+		<article
+			className="group flex flex-col overflow-hidden rounded-lg bg-card card-shadow transition-all duration-300 hover:card-shadow-hover border-2 hover:scale-105 cursor-pointer"
+			onClick={() => window.open(article.sourceUrl, "_blank")}
+		>
 			<div className="relative aspect-16/10 overflow-hidden">
 				<LazyLoadImage
 					src={article.imageUrl}
 					alt={article.title}
-					className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+					className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 					loading="lazy"
 				/>
 			</div>
@@ -32,9 +35,12 @@ const NewsCard = ({ article }: NewsCardProps) => {
 					{truncateText(article.summary, 100)}
 				</p>
 
-				<Button asChild variant="default" size="sm" className="w-fit ">
+				<Button asChild variant="default" size="sm" className="w-fit">
 					<a href={article.sourceUrl} target="_blank" rel="noopener noreferrer">
 						Read More
+						<p className="opacity-70 group-hover:opacity-90 transition-all duration-200 transform">
+							&rarr;
+						</p>
 					</a>
 				</Button>
 			</div>

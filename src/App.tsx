@@ -1,4 +1,4 @@
-import { Activity, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import NewsGrid from "@/components/NewsGrid";
 import CustomError from "./components/CustomError";
@@ -27,27 +27,15 @@ const Index = () => {
 
 	return (
 		<div className="min-h-screen bg-background">
-			<Header />
-
-			<Activity mode={isError ? "visible" : "hidden"}>
-				<main className="container mx-auto px-4">
-					<CustomError />
-				</main>
-			</Activity>
-
-			<Activity mode={isLoading ? "visible" : "hidden"}>
-				<main className="container mx-auto px-4 py-8">
+			<main className="container mx-auto py-4">
+				<Header />
+				{isError ? <CustomError /> : null}
+				{isLoading && !isError ? (
 					<Skeletons />
-				</main>
-			</Activity>
-
-			<Activity
-				mode={isLoading && newsArticles.length === 0 ? "hidden" : "visible"}
-			>
-				<main className="container mx-auto px-4 py-8">
+				) : (
 					<NewsGrid articles={newsArticles} />
-				</main>
-			</Activity>
+				)}
+			</main>
 
 			<footer className="border-t border-border py-6">
 				<div className="container mx-auto px-4 text-center">
