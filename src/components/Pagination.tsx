@@ -16,7 +16,7 @@ const Pagination = ({
 	const canGoNext = currentPage < totalPages;
 
 	return (
-		<div className="flex items-center justify-between mt-10 pt-6 border-t border-border">
+		<div className="flex items-center justify-between pt-6 border-t border-border">
 			<Button
 				variant="outline"
 				onClick={() => onPageChange(currentPage - 1)}
