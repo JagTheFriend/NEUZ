@@ -1,9 +1,9 @@
 # Project Summary:
 
 A modern News Web App that displays articles in a card-style layout.\
-Built completely using HTML for structure, CSS for styling, and JavaScript for functionality.
+Built completely using React for structure, TailwindCSS for styling, and TypeScript for functionality.
 
-News data is fetched dynamically using either a news API or predefined links to real articles.
+News data is fetched dynamically using [NEWS API](https://api.spaceflightnewsapi.net)
 
 ## Key Features:
 
@@ -18,11 +18,4 @@ Each card includes:\
 Page navigation using Previous and Next buttons\
 Responsive layout for desktop
 
-## How News is Loaded
-
-Articles can be fetched in two ways:
-1. API fetching (real & dynamic news)\
-JavaScript requests data from a free news API and renders it live.
-2. Local static news objects (manual links)\
-A JS array contains predefined article titles, images & URLs.
-
+![Sample](image.png)
